@@ -26,7 +26,7 @@ Goose is a database migration tool. Manage your database schema by creating incr
 
 # Install
 
-    $ go get -u github.com/pressly/goose/cmd/goose
+    $ go get -u github.com/sinistra/goose/cmd/goose
 
 This will install the `goose` binary to your `$GOPATH/bin` directory.
 
@@ -55,7 +55,7 @@ Examples:
     goose sqlite3 ./foo.db up
 
     goose postgres "user=postgres dbname=postgres sslmode=disable" status
-    goose mysql "user:password@/dbname?parseTime=true" status
+    goose mysql "user:password@tcp(host:port)/dbname?parseTime=true" status
     goose redshift "postgres://user:password@qwerty.us-east-1.redshift.amazonaws.com:5439/db" status
     goose tidb "user:password@/dbname?parseTime=true" status
     goose mssql "sqlserver://user:password@dbname:1433?database=master" status
